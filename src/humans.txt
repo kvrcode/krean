@@ -1,0 +1,20 @@
+{% comment %} provide information on who has created the site! {% endcomment %}
+
+/* TEAM */
+Your title: You
+Site: email, link to a contact form, etc.
+Twitter: @you
+Location: City, State/Country.
+
+[...]
+
+/* THANKS */
+Name: You
+
+[...]
+
+/* SITE */
+Last update: 1/20/2021
+Standards: HTML5, CSS3, etc...
+Components: Modernizr, jQuery, etc.
+Software: Software used for the development

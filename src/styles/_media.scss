@@ -1,0 +1,9 @@
+// allow for responsiveness across all devices
+
+$breakpoints: (
+    s-mobile: 450px,
+    mobile: 650px,
+    l-mobile: 750px
+    laptop: 1024px
+    desktop-lg: 1800px
+);

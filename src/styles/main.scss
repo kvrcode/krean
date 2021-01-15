@@ -1,0 +1,36 @@
+$blue: blue;
+$border: 1px solid black;
+
+//general default style reset
+@import "reset";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    color: $blue;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin-top: 15px;
+    // border: $border;
+    height: 40vh;
+    width: 80vw;
+    background: rgba( 255, 255, 255, 0.20 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0.0px );
+    -webkit-backdrop-filter: blur( 0.0px );
+    border-radius: 10px;
+    position: relative;
+}
+
+.container > p{
+    text-align: center;
+    margin-top: 5%;
+}
