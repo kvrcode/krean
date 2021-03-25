@@ -1,0 +1,58 @@
+@import "mixins";
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 2rem;
+    background: rgb(88,81,140);
+    background: linear-gradient(90deg, rgba(88,81,140,1) 0%, rgba(51,44,99,1) 50%, rgba(84, 26, 78, 1) 100%);
+    color: $white;
+
+    @include viewport (tablet) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include viewport (4k) {
+        font-size: 3rem;
+    }
+
+
+    & > * {
+        padding: 1rem;
+
+        @include viewport (tablet) {
+            padding: 3rem;
+        }
+    }
+
+    &__brand{
+        font-weight: $bold;
+        font-size: 2rem;
+
+        @include viewport (4k) {
+            font-size: 3rem;
+        }
+    }
+
+    &__email,
+    &__phone{
+        display: flex;
+        align-items: center;
+
+        & > p{
+            margin-left: 0.5rem;
+        }
+    }
+
+    &__socials{
+        font-size: 1.4rem;
+
+        @include viewport (4k) {
+            font-size: 3rem;
+        }
+    }
+
+}

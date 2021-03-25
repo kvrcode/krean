@@ -7,6 +7,9 @@
 
     <title>Modern Boilerplate</title>
 
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/fff28f1321.js" crossorigin="anonymous"></script>
+
     <!-- fonts -- delete or change this -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -16,9 +19,190 @@
 </head>
 <body>
 
-    <div class="container">
-    
+    <div id="header" class="header-hero-wrapper">
+        <header class="header">
+            <div class="header__brand">
+                <p><a class="scroll" href="#header">KREA.</a></p>
+            </div>
+            <nav class="nav nav-toggle-off">
+                <div class="nav__links">
+                    <a class="scroll" href="#services">Services</a>
+                    <a class="scroll" href="#works">Works</a>
+                    <a class="scroll" href="#references">References</a>
+                    <a class="scroll" href="#contact">Contact</a>
+                </div>
+            </nav>
+            <div class="hamburger hamburger--spin header__hamburger">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </header>
+        <div id="hero" class="hero">
+            <div class="hero__content">
+                <h1>Digital Marketing</h1>
+                <p>Consultancy</p>
+            </div>
+            <img class="hero__mouse" src="" alt="mouse scroll">
+        </div>
+        <img class="header-hero-background-img" src="" alt="background-img">
     </div>
+
+    <section id="services" class="services">
+        <h3>KREA.</h3>
+        <p>Services</p>
+        <hr>
+        <div class="services__wrapper">
+            <div class="services__card">
+                <img src="" alt="consultancy-img" class="services__icon">
+                <h5>Consultancy</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget elementum nisi. Curabitur cursus, dolor ac tempus pulvinar, risus risus elementum eros, vehicula ultricies quam arcu at augue. Donec lacinia erat nec tincidunt dignissim. Etiam egestas euismod ipsum, vitae commodo neque lacinia ac </p>
+            </div>
+            <div class="services__card">
+                <img src="" alt="mentorship-img" class="services__icon">
+                <h5>Mentorship</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget elementum nisi. Curabitur cursus, dolor ac tempus pulvinar, risus risus elementum eros, vehicula ultricies quam arcu at augue. Donec lacinia erat nec tincidunt dignissim. Etiam egestas euismod ipsum, vitae commodo neque lacinia ac </p>
+            </div>
+            <div class="services__card">
+                <img src="" alt="incubatory-img" class="services__icon">
+                <h5>Incubatory</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget elementum nisi. Curabitur cursus, dolor ac tempus pulvinar, risus risus elementum eros, vehicula ultricies quam arcu at augue. Donec lacinia erat nec tincidunt dignissim. Etiam egestas euismod ipsum, vitae commodo neque lacinia ac </p>
+            </div>
+        </div>
+        <button class="services__cta">Get in touch</button>
+    </section>
+
+    <section id="works" class="works">
+        <h3>Works</h3>
+        <hr>
+        <div class="works__grid">
+            <div class="works__grid__card works__one">
+                <!-- <img class="works__img" src="" alt="portfolio-img"> -->
+                <div class="works__grid__card-hidden">
+                    <div>
+                        <p class="project-title">Project X</p>
+                        <p class="project-description">2021 C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="works__grid__card works__two">
+                <!-- <img class="works__img" src="" alt="portfolio-img2"> -->
+                <div class="works__grid__card-hidden">
+                    <div>
+                        <p class="project-title">Project X</p>
+                        <p class="project-description">2021 C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="works__grid__card works__three">
+                <!-- <img class="works__img" src="" alt="portfolio-img3"> -->
+                <div class="works__grid__card-hidden">
+                    <div>
+                        <p class="project-title">Project X</p>
+                        <p class="project-description">2021 C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="works__grid__card works__four">
+                <!-- <img class="works__img" src="" alt="portfolio-img4"> -->
+                <div class="works__grid__card-hidden">
+                    <div>
+                        <p class="project-title">Project X</p>
+                        <p class="project-description">2021 C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="works__grid__card works__five">
+                <!-- <img class="works__img" src="" alt="portfolio-img5"> -->
+                <div class="works__grid__card-hidden">
+                    <div>
+                        <p class="project-title">Project X</p>
+                        <p class="project-description">2021 C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="works__grid__card works__six">
+                <!-- <img class="works__img" src="" alt="portfolio-img6"> -->
+                <div class="works__grid__card-hidden">
+                    <div>
+                        <p class="project-title">Project X</p>
+                        <p class="project-description">2021 C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="works__grid__card works__seven">
+                <!-- <img class="works__img" src="" alt="portfolio-img7"> -->
+                <div class="works__grid__card-hidden">
+                    <div>
+                        <p class="project-title">Project X</p>
+                        <p class="project-description">2021 C</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 x 3 spaced out with some elements taking up two vertical spots -->
+        </div>
+    </section>
+
+    <section id="references" class="references">
+        <h3>References</h3>
+        <hr>
+        <div class="references__wrapper">
+            <div class="references__card">
+                <!-- <span class="references__arrow references__arrow__left"> < </span> -->
+                <img src="" alt="reference-headshot" class="references__img">
+                <div class="references__info">
+                    <p class="references__name">John Doe</p>
+                    <p class="references__about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget elementum nisi. Curabitur cursus, dolor ac tempus pulvinar, risus risus elementum eros, vehicula ultricies quam arcu at augue. Donec lacinia erat nec tincidunt dignissim. Etiam egestas euismod ipsum, vitae commodo neque lacinia ac </p>
+                </div>
+                <!-- <span class="references__arrow references__arrow__right"> > </span> -->
+            </div>
+        </div>
+        <div class="references-company-list">
+            <!-- img -->
+            <!-- img -->
+            <!-- etc etc etc -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h3>Contact</h3>
+        <div class="contact__wrapper">
+            <form action="" method="post">
+                <div>
+                    <input class="contact__name contact__input-field contact__input" type="text" placeholder="name">
+                    <input class="contact__email contact__input-field contact__input" type="email" placeholder="e-mail">
+                </div>
+                <input class="contact__message contact__input-field contact__input" type="text" placeholder="message">
+                <input class="contact__input-submit contact__input" type="submit" value="Send">
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <p class="footer__brand">Krea.</p>
+        <div class="footer__location">
+            <p>John Street,</p>
+            <p>Doe Building</p>
+            <p>11/8 Edirne/Turkey</p>
+        </div>
+        <div class="footer__contact-info">
+            <div class="footer__email">
+                <i class="far fa-envelope"></i>
+                <p>info@envato.com</p>
+            </div>
+            <div class="footer__phone">
+                <i class="fas fa-phone"></i>
+                <p>900 800 70 60</p>
+            </div>
+        </div>
+        <div class="footer__socials">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <p>All rights reserved.</p>
+        </div>
+    </footer>
 
     <!-- js injected -->
 </body>

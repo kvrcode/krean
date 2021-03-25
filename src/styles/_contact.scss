@@ -1,0 +1,92 @@
+@import "mixins";
+
+.contact{
+    padding: 5rem 2rem;
+    text-align: center;
+    color: #f4f4f4;
+    height: 50vh;
+    background-color: #141414;
+
+    @include viewport (laptop) {
+        height: 65vh;
+    }
+
+    &__wrapper{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include viewport (4k) {
+            font-size: 3rem;
+        }
+
+        & > form > div:nth-child(1){
+            display: flex;
+            justify-content: space-between;
+        }
+
+        & > form {
+            width: 75%;
+
+            @include viewport (laptop) {
+                width: 50%;
+            }
+        }
+    }
+
+    &__name,
+    &__email{
+        width: 49%;
+        // color: $white;
+    }
+
+    & > h3{
+        font-weight: $regular;
+    }
+
+    &__input-field{
+        padding: 1rem;
+        background-color: inherit;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid white;
+        color: $white;
+    }
+
+    &__message{
+        width: 100%;
+        margin-top: 2.5rem;
+
+        @include viewport (laptop) {
+            margin-top: 5rem;
+        }
+    }
+
+    &__input-submit{
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        text-transform: uppercase;
+        background-color: grey;
+        border: none;
+        outline: none;
+        transition: all 1s ease;
+        cursor: pointer;
+
+        &:hover{
+            background-color: white;
+        }
+
+        @include viewport (4k) {
+            margin-top: 12rem;
+            padding: 2rem 5rem;
+        }
+    }
+
+    &__input{
+        opacity: 0;
+        transform: translate(-100%, 0);
+    }
+}

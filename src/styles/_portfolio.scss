@@ -1,0 +1,133 @@
+@import "mixins";
+
+$randX: random(50) + 'deg';
+$randY: random(50) + 'deg';
+
+.works{
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem 2rem;
+    background-color: lightgrey;
+
+    @include viewport (tablet) {
+        padding: 5rem 8rem;
+    }
+
+    @include viewport (4k) {
+        padding: 5rem 30rem;
+    }
+
+    & > hr{
+        width: 8%;
+    }
+
+    &__grid{
+        width: 100%;
+        margin-top: 5rem;
+
+
+        @include viewport (tablet) {
+            display: grid;
+            grid-gap: 5rem;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "one two"
+                "three four"
+                "five six"
+                "seven seven";
+
+            .works__one{ grid-area: one };
+            .works__two{ grid-area: two };
+            .works__three{ grid-area: three };
+            .works__four{ grid-area: four };
+            .works__five{ grid-area: five };
+            .works__six{ grid-area: six };
+            .works__seven{ grid-area: seven };
+        }
+
+        @include viewport (desktop) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+                "one two three"
+                "four five three"
+                "six five seven";
+        }
+
+        &__card{
+            width: 100%;
+            height: 280px; //set via js for now
+            border-radius: 5px;
+            // position: relative;
+            box-shadow: 0 1px 7px -26px rgba(0, 0, 0, 0.18),
+                        0 8px 56px -26px rgba(0, 0, 0, 0.36);
+            margin-top: 5rem;
+
+            opacity: 0;
+            @include viewport (tablet){
+                margin-top: 0;
+            }
+
+
+            :hover .works__grid__card-hidden{
+                display: block;
+            }
+
+            @include viewport (tablet) {
+                height: 300px;
+            }
+
+            @include viewport (desktop) {
+                height: 400px;
+            }
+
+            @include viewport (4k) {
+                height: 600px;
+            }
+        }
+
+        &__card-hidden{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            position: relative;
+            display: none;
+
+            & > div{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+    &__three,
+    &__five{
+        @include viewport (desktop) {
+            height: 100%;
+        }
+    }
+
+    &__one{
+        transform: translate(-100%, 25%);
+    }
+    &__two{
+        transform: translate(25%, 75%);
+    }
+    &__three{
+        transform: translate(50%, 50%);
+    }
+    &__four{
+        transform: translate(-42%, 150%);
+    }
+    &__five{
+        transform: translate(0%, 75%);
+    }
+    &__six{
+        transform: translate(84%, 250%);
+    }
+    &__seven{
+        transform: translate(75%, 25%);
+    }
+}

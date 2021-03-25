@@ -1,0 +1,53 @@
+@import "mixins";
+
+.hero{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // position: relative;
+    color: #f4f4f4;
+
+    &__content{
+        margin-top: -20rem;
+        font-size: 2rem;
+        font-weight: $regular;
+
+        & > h1 {
+            transform: translate(0, 100%);
+            opacity: 0;
+        }
+
+        & > p{
+            transform: translate(0, 100%);
+            opacity: 0;
+            font-size: 2rem;
+            @include viewport (4k){
+                font-size: 3rem;
+            }
+        }
+
+        @include viewport (4k){
+            font-size: 4rem;
+            margin-top: -40rem;
+        }
+    }
+
+    &__mouse{
+        width: 40px;
+        height: auto;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: -20px;
+        bottom: 5%;
+        text-align: center;
+
+        @include viewport (4k) {
+            width: 80px;
+            height: auto;
+        }
+    }
+}

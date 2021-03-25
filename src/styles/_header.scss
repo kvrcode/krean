@@ -1,0 +1,116 @@
+@import "mixins";
+
+#header{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    margin-left: -2px;
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    color: #f4f4f4;
+    background-color: transparent;
+    transition: all 0.5s ease;
+
+    @include viewport (laptop) {
+        padding: 5rem 8rem;
+    }
+
+    @include viewport (4k) {
+        padding: 15rem 30rem;
+    }
+
+    &__brand > p > a{
+        color: $white;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: $bold;
+
+        @include viewport (4k) {
+            font-size: 5rem;
+        }
+    }
+
+    &__hamburger{
+        @include viewport(laptop){
+            display: none;
+        }
+    }
+}
+.header-nav-active-bg{
+    background-color: $blue;
+}
+
+.header-hero-background-img{
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+.nav{
+    z-index: 100;
+    background-color: $blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: calc(100vh - 61px);
+    transform: translate(100%, 0);
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    @include viewport (laptop) {
+        transform: translate(0%, 0);
+        opacity: 1;
+        background-color: transparent;
+        position: static;
+        height: 100%;
+        width: unset;
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+
+        @include viewport (laptop) {
+            flex-direction: row;
+        }
+
+        & > a{
+            color: #f4f4f4;
+            font-size: 1.4rem;
+            text-decoration: none;
+            padding: 0.7rem;
+
+            transform: translate(100%, 0);
+            opacity: 0;
+
+            @include viewport (4k) {
+                font-size: 3rem;
+                padding: 3rem;
+            }
+        }
+    }
+}
+.nav-active-toggle{
+    transform: translate(0,0);
+    opacity: 1;
+}

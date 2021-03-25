@@ -1,36 +1,56 @@
-$blue: blue;
 $border: 1px solid black;
+$bold: 700;
+$regular: 400;
+$blue: #332c63;
+$white: #f4f4f4;
+$padding: 5rem 2rem;
 
-//general default style reset
+/*
+    jonsuh.com/hamburgers -- used for mobile devices
+*/
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
+
+/*
+    reset document provided by https://dev.to/hankchizljaw/a-modern-css-reset-6p3
+*/
 @import "reset";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
-    color: $blue;
-}
+/*
+    global styling
+*/
+@import "global";
 
-body{
-    display: flex;
-    justify-content: center;
-}
+/*
+    header styling
+*/
+@import "header";
 
-.container{
-    margin-top: 15px;
-    // border: $border;
-    height: 40vh;
-    width: 80vw;
-    background: rgba( 255, 255, 255, 0.20 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 0.0px );
-    -webkit-backdrop-filter: blur( 0.0px );
-    border-radius: 10px;
-    position: relative;
-}
+/*
+    hero styling
+*/
+@import "hero";
 
-.container > p{
-    text-align: center;
-    margin-top: 5%;
-}
+/*
+    services styling
+*/
+@import "services";
+
+/*
+    portfolio styling
+*/
+@import "portfolio";
+
+/*
+    references styling
+*/
+@import "references";
+
+/*
+    contact styling
+*/
+@import "contact";
+
+/*
+    footer styling
+*/
+@import "footer";

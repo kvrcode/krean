@@ -1,0 +1,118 @@
+@import "mixins";
+
+.services{
+    padding: 5rem 2rem;
+    min-height: 100vh;
+    text-align: center;
+
+    @include viewport (tablet) {
+        padding: 5rem 20rem;
+    }
+
+    @include viewport (laptop) {
+        padding: 5rem 8rem;
+    }
+
+    @include viewport (4k) {
+        padding: 5rem 30rem;
+    }
+
+    & > hr{
+        width: 8%;
+    }
+
+    &__wrapper{
+        @include viewport (laptop) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @include viewport (4k) {
+            margin-top: 15rem;
+        }
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5rem 0;
+
+        @include viewport (laptop) {
+            padding: 1rem;
+        }
+
+        & > h5{
+            font-weight: $regular;
+            font-size: 1.8rem;
+            color: #6e6e6e;
+            margin: 1.67rem 0;
+            opacity: 0;
+
+            @include viewport (laptop) {
+                margin: 3rem 0;
+            }
+
+            @include viewport (4k) {
+                font-size: 5rem;
+            }
+        }
+
+        & > p{
+            text-align: left;
+            opacity: 0;
+
+            @include viewport (4k) {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &__icon{
+        height: auto;
+        width: 20%;
+        opacity: 0;
+        transform: skew(15deg, 15deg);
+
+        @include viewport (laptop) {
+            height: 7rem;
+            width: auto;
+        }
+
+        @include viewport (desktop) {
+            height: 10rem;
+            width: auto;
+        }
+
+        @include viewport (4k) {
+            height: 20rem;
+            width: auto;
+        }
+    }
+
+    &__cta{
+        text-transform: uppercase;
+        width: 150px;
+        height: 30px;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        cursor: pointer;
+        background-color: $blue;
+        color: $white;
+
+        @include viewport (laptop) {
+            margin-top: 4.5rem;
+        }
+
+        @include viewport (4k) {
+            font-size: 2.5rem;
+            width: 500px;
+            height: 150px;
+            border-radius: 75px;
+            margin-top: 10rem;
+        }
+    }
+}

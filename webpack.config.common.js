@@ -20,7 +20,10 @@ module.exports = {
     rules: [
       {
         test: /\.(jpg|png)$/,
-        loader: 'url-loader' // or 'url'
+        loader: 'url-loader',// or 'url'
+        options: {
+          limit: 10 * 1024
+        }
       },
       {
         test: /\.(js|jsx)$/,
